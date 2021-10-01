@@ -4,6 +4,7 @@ class PeopleController
   end
 
   def normalize
+    People::ParserService.new(params).call
   end
 
   private
